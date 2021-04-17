@@ -155,4 +155,21 @@
                 document.getElementById("numcheck").innerHTML = response
             }
         </script>
+        <p></p>
+        <p>there are many issues with client side scripting which can lead to issues depending on what browser you like to use a example of code running differently on different browser is bellow</p>
+        <p id="example"></p>
+        <script>
+            var b = [1, 2, 3,]
+            document.getElementById("example").innerHTML = b
+        </script>
+        <p>if you try and open the website in internet explorer then 1,2,3 will not appear but if you open it in chrome or safari then it will appear this is because it depends on what implementation of javascript the browser is built with also it can change depending on the browser engine and internet explorer is quite old meaning it was built with a older version of javascript as well as a older engine which have some bugs like above and more modern browsers have implemented fixes for these issues one simple fix for the issue above to make it appear on all browsers is by removing the comma at the end of the number list</p>
+        <img src="Annotation 2021-04-17 020052.png">
+        <p>the image above is the problematic code</p>
+        <img src="Annotation 2021-04-17 020348.png">
+        <p>and the image above is the fix that will allow it to appear on all browsers bellow is the proof</p>
+        <p id="proof"></p>
+        <script>
+            var a = [1, 2, 3]
+            document.getElementById("proof").innerHTML = a
+        </script>
     </body>
