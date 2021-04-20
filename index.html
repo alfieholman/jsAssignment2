@@ -88,69 +88,125 @@
             font-size: 1.125em;
         }
 
-        .column 
-        {
-            float: left;
-            width: 32%;
-            padding-top: 25px;
-        }
-
-        .row:after 
-        {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        @media screen and (max-width:600px)
-        {
-            .column 
-            {
-                width: 100%;
-            }
-        }
+    
 
     </style>
     <head>
-        <h1>Assignment 1</h1>    
+        <h1>Assignment 2</h1>    
     </head>
     <body>
-
-        <div class="menu">
-            <a href="Testpage.html">test</a>
-            <a href="Testpage.html">test</a>
-            <div class="dropdown">
-              <button class="dropbtn">Dropdown</button>
-              <div class="dropdown-content">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">box model reference</a>
-                <a href="http://www.boogiejack.com/CSS_2.html#:~:text=Embedded%20styles%20are%20set%20in,of%20an%20external%20style%20sheet.&text=An%20external%20style%20is%20simply,file%20containing%20your%20style%20rules.">types of CSS reference</a>
-                <a href="https://www.bitdegree.org/learn/internal-css">CSS examples image source</a>
-              </div>
-            </div> 
-          </div>
-            
-        <h2>Different ways of implementing CSS</h2>
-        <p>there are 3 different methods for accessing CSS these are Inline, Embedded and External bellow I will describe what they are and give some examples on them to make it easier to understand. </p>
-        <div class="row">
-            <div class="column">
-              <p>The first of the three is Inline this is what I considers the most simple of the three methods this uses the style to edit attributes but only on one element in html this means that it doesn't cover the whole web page just that just that one instance for example if you have a embedded CSS that added a style to every paragraph but you wanted one paragraph to be completely different you could edit that one paragraph in a Inline CSS this would overrule the embedded CSS rule but that would be only in this one instance which is very important not to mistake it for the whole web page.</p>
-            </div>
-  
-            <div class="column">
-              <p>The next one is Embedded this is slightly different to inline it still uses the style to change attributes but instead of only editing only one element it edits the whole web page it does this by having all the edited attributes in the head part of the html this will effect the whole document unless inline CSS is used anywhere on the page this will overrule the edit element. this is in my opinion the most import type of CSS because it can affect your whole web page and can change the whole feel of a website quite easily.</p>
-            </div>
-  
-            <div class="column">
-              <p>The final way of accessing CSS is External this is also done in the head of html but instead of writing all of the edited elements and attributes you instead link the web page to a file which contains all of the styles that you want in your document this means that if you have a large website with lots of pages then you don't need to go through each one and change the embedded CSS you can instead link all your pages to that file and then edit the file which will reflect on every page that is linked to that file making updating a large website much easier.</p>
+            <div class="menu">
+                    <a href="Testpage.html">test</a>
+                    <a href="Testpage.html">test</a>
+                    <div class="dropdown">
+                      <button class="dropbtn">Dropdown</button>
+                      <div class="dropdown-content">
+                        <a href="https://www.w3schools.com/js/js_versions.asp">reference</a>
+                        <a href="https://www.tendenci.com/help-files/meaning-of-hits-visits-page-views-and-traffic-sources-web-analytics-definitions/">reference</a>
+                        <a href="https://www.highspeedtraining.co.uk/hub/types-of-identity-theft/"> reference</a>
+                        <a href="https://www.hutsix.io/what-is-the-punishment-for-breaking-the-data-protection-act/"> reference</a>
+                      </div>
+                    </div> 
             </div>
         
-            <img src="CSS type example.jpg" width="532" height="396">
+        <h2>Characteristics of javascript</h2>
+        <p>javascript is a object oriented programing language it uses a just in time compiler and is used in things such as websites, games and mobile applications. In javascript there is something called a object this refers to a set of data that is linked together for example if a person was a object the data would be their name, hight, weight, date of birth and other similar data all of this data comes together to for a object in this case it would be a person. with a object you can add new data or preform a action on it when these functions are stored inside a objects properties it is known as a method. when something happens in HTML it is know as a event these are thing such as pressing a button or loading a image when these events happen javascript can be ran alongside the HTML code to allow the event to do different things such as having a window closed when a button is pressed or having the dat displayed. Javascript is good but it does have some security issues such as unintended script execution this is when a user manages enter script into a javascript program when they aren't intended to this can sometimes be done through text boxes the script can allow them to access information or privileges that they shouldn't be able to get another big security issue is source code vulnerabilities as the source code for website is visible a potential hacker could study the code and find a flaw within it leading to a hack or issue and as javascript is just in time compiled the source code is required to allow the website to run and this can lead to issues like this </p>
+        
+        <button onclick="redirect()">this will redirect you</button>
+        <button onclick="useralert()">alert</button>
+        <button onclick="userconfirm()">confirm</button>
+        <button onclick="userpromptboxes()">prompt box</button>
+        <p></p>
+        <p>please enter a number between 15 and 30</p>
+        <input id="valid">
+        <button onclick="validation()">validate number</button>
+        <p id="numcheck"></p>
 
-            <h2>Box model in html</h2>
+        <script>
+            function redirect()
+            {
+                location.replace("page redirect.html")
+            }
+            function useralert()
+            {
+                alert("this is a alert")
+            }
+            function userconfirm()
+            {
+                confirm("this is a confirm box")
+            }
+            function userpromptboxes()
+            {
+                var person = prompt("please enter the date"); 
+            }
+            function validation()
+            {
+                var response,x
 
-            <p>The box model is a key part of understanding how html works you can think if it as a box with many boxes inside it each smaller than the one before the one being on the edge is the margin then the border, padding and then content in the middle each part holds different things in html. The content part is the simplest to understand it is the part where words, images or videos are shown to the user. Next is the padding area this is what goes around the edge of the content it can be edited with padding top, padding left, padding right, padding bottom as well as just padding. next is the border area this goes around the padding this will create a gap between the padding and the margin .The margin is a transparent gap that goes all the way around the edge of the content you can edit the size of the margin different elements in the code.</p>
+                x = document.getElementById("valid").value;
 
-            <img src="boxCSS.png" width="319" height="158">
-          </div>
+                if ( x > 1 && x < 10)
+                    {
+                        response="good";
+                    }
+                    else
+                    {
+                        response="bad"
+                    }
+                document.getElementById("numcheck").innerHTML = response
+            }
+        </script>
+        <p></p>
+        <p>there are many issues with client side scripting which can lead to issues depending on what browser you like to use a example of code running differently on different browser is bellow</p>
+        <p id="example"></p>
+        <script>
+            var b = [1, 2, 3,]
+            document.getElementById("example").innerHTML = b
+        </script>
+        <p>if you try and open the website in internet explorer then 1,2,3 will not appear but if you open it in chrome or safari then it will appear this is because it depends on what implementation of javascript the browser is built with also it can change depending on the browser engine and internet explorer is quite old meaning it was built with a older version of javascript as well as a older engine which have some bugs like above and more modern browsers have implemented fixes for these issues one simple fix for the issue above to make it appear on all browsers is by removing the comma at the end of the number list</p>
+        <img src="Annotation 2021-04-17 020052.png">
+        <p>the image above is the problematic code</p>
+        <img src="Annotation 2021-04-17 020348.png">
+        <p>and the image above is the fix that will allow it to appear on all browsers bellow is the proof</p>
+        <p id="proof"></p>
+        <script>
+            var a = [1, 2, 3]
+            document.getElementById("proof").innerHTML = a
+        </script>
+        <p></p>
+        <h2>client factors affecting website performance</h2>
+        <p></p>
+        <p>the first thing that could affect a websites performance is the device that the user is using as different devices have different operating systems this means that they will all interpret information differently and will have different order priority to tasks for example windows may have web browsers high up on resource management where as Mac OS may have it lower down on the list this means that even if the devices were exactly the same apart from the OS then the windows device will load web browsers quicker so it is always important to take the type of device into consideration when designing a website</p>
+        <p></p>
+        <p>the next thing that could affect a websites performance is the end users hardware specifications this is because if your website is very large with not very efficient code then it will take up more hardware resources and is the user doesn't have much RAM or has a bad CPU then the device will have a much harder time making the website run but a device with a good CPU and more RAM wouldn't have such a hard time making the website run as it has more hardware resources to spare </p>
+        <p></p>
+        <p>another thing that can affect the preform of a website is the users choice of web browser as different browsers have different implementations of javascript so some may have issues running newer code for example Safari in 2017 was using version 10.1 but chrome was using version 52 in 2016 so certain code would work on chrome but not Safari as it is operating on a much older version so it is important to make your code functional for all different browsers and not just one or two</p>
+        <p></p>
+        <h2>server factors affecting website performance</h2>
+        <p></p>
+        <p>one server issue that can affect performance is the the executions that have to be preformed before the page loads for example if a website is linked to a database that has personal information on a person then the website will have to load all the data that they have connected to the user before the website loads otherwise the user would have to re-enter all their personal information every time they open up the website and because the website has to send a request with conformation on who the user is to the data base and then wait for the database to send the information back to the website this is going to take much longer to load that a website that doesn't have a database attached to it</p>
+        <p></p>
+        <p>the amount of hits a server has can affect the performance of website a hit means the amount of file request a website has for example when a user visits a website it will request the page the server will send the page in the form of a file so each page as well as any downloads or images is counted as a hit on a website and if a server has to do lots of these hits at once it will slow down the server drastically meaning the performance will also go down depending on the amount of hits a website has at the same time </p>
+        <p></p>
+        <p>available bandwidth can affect the performance of a website as if the bandwidth is too low then the server that hosts the website wont be able to reply to all the requests it is receiving from users and when the bandwidth is maxed out users wont get the requested information which will lead to website performance issues</p>
+        <p></p>
+        <h2>Website security</h2>
+        <p></p>
+        <p>there are many types of viruses one of them being a trojan virus this type of virus much like the greek story tries to disguise itself as a different file or program and once the user downloads it the virus will activate thats why it is important to not download any file you find on the internet as it may not be safe and may be a virus in disguise. Another type of virus that you have to weary of is worm virus this type of virus when activated will try and infect a whole network by self replicating and spreading through out the network that a device is connected to this can be deadly for large companies as it only takes one user to download the virus and it will spread to all devices.</p>
+        <p></p>
+        <p>the most simple and also the most effective protection from a trojan virus is to simply not download any files from random websites only download files from trusted places the other type of protection that you could get is a anti virus that allows you to scan files before you download them as this will check all the downloaded files for any suspicious code that could be a virus and will immediately quarantine the files or delete them stopping them from doing anything. For worm viruses the best protection is to limit who can download files on a network as this will stop people from initially downloading the virus the other type of protection is to limit who can share files with who this segmenting of the network will stop the virus from spreading for example a normal office worker cant send files to an IT admin this would stop the virus from spreading to the admin effectively limiting the amount of devices on the network that it can infect.</p>
+        <p></p>
+        <p>Hacking is the process of trying to get access to another devices information that they shouldn't be able to access this can be done by many methods such as using virus or even social engineering</p>
+        <p></p>
+        <p>there are many types of protection that can be used to stop hackers from getting access to your information such as using a antivirus this will detect any viruses that a hacker has managed to download on to your device and will quarantine them or delete them this will remove the files and stop the virus from running another type of protection that you can get from hackers is a upgraded firewall this is what decided what requests and files can be sent to your device and will stop certain ones if they seem suspicious or dangerous if you upgrade it there is a higher chance that it could protect you against more types of hacks</p>
+        <p></p>
+        <p>The computer misuse act of 1990 is a piece of law that tries to stop certain things such as gaining access to a computer without consent and making viruses with malicious intent on your computer and electronic devices and makes it illegal to try and hack someone’s computer without their permission or making it illegal to even help these people with the knowledge that they intend to use it criminal intent this law is used to prosecute hackers that access networks or systems without concent.</p>    
+        <p></p>
+        <p>there are 5 main types of identity theft the first one is driver license fraud this type of identity theft works by the a person issuing a drives license under someone elses name this allows them to break certain laws on the road and then blame them on someone else with the drivers license the next type of identity theft is Financial identity theft this is where criminals use stolen personal information to gain access to your banks or create their own bank account with your information this allows them to spend lots of money under your name and can cause you to go into debt or they could take out loans that you may have to pay off. child identity theft is normally committed by a relative who will use the childs information to take out loans ot money and because children wont know how banking really works they may not realise what has happened. change of address fraud is when someone attempts to change where your mail is sent to normally redirecting your mail to themselves as they can then use this to get information and also possibly get new debit or credit cards sent to their house instead of yours. the final type of identity theft is employment identity theft this is where people use stolen information to try and gain employment this is normally to try and hide their own personal history.</p>
+        <p></p>
+        <p>there are many ways to protect yourself from identity theft for drivers license fraud don't hand out your personal information and also when a new drivers license is issued email the previously used email address saying a new drives license has been issued this can then allow the original user to cancel the new license stopping the fraud from taking place. for financial identity theft again don't send unknown people your personal information and always check your bank to see if any money is missing or if a new card has been issued. for child identity theft it is best to try and educate children on how banking works so they can understand if something has gone wrong or money is missing. for change of address fraud they should send one last letter to the previous listed address saying it is changing and where its changing to this can then alert the home owner and they can then message their bank to sort it out. for Employment identity theft you should have to bring some kind of identification such as a passport or license with a image on it this can then allow the employer to confirm who you are.</p>
+        <p></p>
+        <p>the data protection act can be used to prosecute an organisation that fails to protect their users data if a organisation doesn't protect their users data then what will happen is that people who have had their data stolen can take the organisation to court over the lost data</p>
+        <p></p>
+        <p>one way that a company can protect their users personal data is by paying a company that specializes in data protection this will improve their security as even if the company is hacked the data isn't in their system it is with another company the other company will also be more used to handling personal information and will be much better suited to it another way that a organisation can protect personal data is by encrypting it this will mean that instead of all the information being stored as plain text that anyone can read it will be stored with all the words being messed up and it will need a key to turn it back into plain text that can be understood this means even if someone gains access to this information they wont be able to use it at all unless they have the key to undo the information making the data much safer and harder to understand </p>
     </body>
-</html>
